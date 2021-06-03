@@ -1,1 +1,95 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.central {
+  max-height: 90vh;
+  max-width: 90vw;
+}
+
+h1 {
+  background-color: #1b5e20;
+  padding-bottom: 5px;
+  margin: 2px;
+}
+
+.listaCartas {
+  width: 90vw;
+  height: 14vh;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 0.7em;
+}
+
+.democlass {
+  width: 90vw;
+  height: 14vh;
+  margin: 0 auto;
+  padding-top: 1vh;
+  padding-left: 1vh;
+  background-color: #17a2b8;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-column-gap: 0.25vw;
+}
+
+.democlass > div {
+  color: red;
+  background-color: white;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 8vw;
+  height: 12vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "izquierdaArriba . ."
+    ". central ."
+    ". . derechaAbajo";
+}
+
+.izquierda {
+  grid-area: izquierdaArriba;
+}
+
+.numero {
+  grid-area: central;
+}
+
+.derecha {
+  grid-area: derechaAbajo;
+}
+
+.bubbleLog {
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 1vh;
+  padding-left: 1vh;
+  background-color: #17a2b8;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+}
+
+.bubbleLog > div {
+  color: red;
+  background-color: white;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 8vw;
+  height: 12vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "izquierdaArriba . ."
+    ". central ."
+    ". . derechaAbajo";
+}
