@@ -37,6 +37,7 @@ function cartasToScreen(numero, figura, posicion, condicional) {
   let listaCartas = document.querySelector(`.${posicion}`);
   if (condicional == 2) {
     listaCartas.innerHTML = "";
+    document.getElementById("prueba").innerHTML = "";
   } else {
     console.log("");
   }
@@ -62,13 +63,15 @@ function cartasToScreen(numero, figura, posicion, condicional) {
     subDivFiguraIzquierda.appendChild(textForFiguraIzquierda);
     subDivFiguraDerecha.appendChild(textForFiguraDerecha);
     subDivNumero.appendChild(textForNumero);
-    if (figura[x] == "♠" || figura[x] == "♣") {
-      console.log("Hola");
+
+    if (retornoFigura[x] == "♠" || retornoFigura[x] == "♣") {
+      console.log(retornoFigura[x]);
       console.log(subDivFiguraDerecha);
       subDivFiguraDerecha.style = "color:black";
       subDivFiguraIzquierda.style = "color:black";
       subDivNumero.style = "color:black";
     }
+
     //
     listaCartas.appendChild(newDivDemoClass);
     newDivDemoClass.appendChild(subDivFiguraIzquierda);
@@ -81,8 +84,8 @@ function cartasToScreen(numero, figura, posicion, condicional) {
     subDivNumero.setAttributeNode(attNumero);
     subDivFiguraDerecha.setAttributeNode(attFiguraDerecha);
   }
-
   prueba.style = `grid-template-columns: repeat(${numero.length}, auto)`;
+  //prueba2.style = `grid-template-columns: repeat(${figura.lenght}, auto)`;
 }
 
 function sortCards() {
@@ -97,6 +100,7 @@ function sortCards() {
         }
         cartasToScreen(retornoCentro, retornoFigura, "bubbleLog", 1);
       }
+      //cartasToScreen(retornoCentro, retornoFigura, "bubbleLog", 1);
     }
     return inputArr;
   };
